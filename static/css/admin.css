@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+.admin-container {
+    display: flex;
+    width: 100%;
+}
+.sidebar {
+    width: 250px;
+    background: #2C3E50;
+    color: #ECF0F1;
+    padding: 20px;
+}
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar ul li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background: #34495E;
+}
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: #ECF0F1;
+}
+.user-table table {
+    width: 100%;
+    background: #FFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.user-table th, .user-table td {
+    padding: 15px;
+    text-align: left;
+}
+.user-table th {
+    background: #3498DB;
+    color: #FFF;
+}
+.status.active {
+    color: #27AE60;
+    font-weight: bold;
+}
+.status.blocked {
+    color: #E74C3C;
+    font-weight: bold;
+}
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+}
+.block-btn {
+    background: #E74C3C;
+}
+.unblock-btn {
+    background: #27AE60;
+}

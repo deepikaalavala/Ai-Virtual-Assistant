@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar navigation -->
+        <aside class="sidebar">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="#" class="active" onclick="showDashboard()"><i class="fas fa-users"></i> Users</a></li>
+                <!-- Link to Analytics page -->
+                <li><a href="#" onclick="showAnalytics()"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <!-- Logout button -->
+                <li><a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+        <main class="main-content" id="main-content">
+            <!-- Dashboard content -->
+            <div id="dashboard-content">
+                <header>
+                    <h1>Users Management</h1>
+                </header>
+                <section class="user-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="user-list">
+                            <!-- User data will be inserted here -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            <!-- Analytics content (hidden by default) -->
+            <div id="analytics-content" style="display:none">
+                <header>
+                    <button onclick="showDashboard()" class="back-button"><i class="fas fa-arrow-left"></i> Back</button>
+                    <h1>Analytics</h1>
+                </header>
+                <section>
+                    <p>Analytics data will be displayed here.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+    <!-- JavaScript for content switching -->
+    <script>
+        function showAnalytics() {
+            document.getElementById('dashboard-content').style.display = 'none';
+            document.getElementById('analytics-content').style.display = 'block';
+        }
+
+        function showDashboard() {
+            document.getElementById('analytics-content').style.display = 'none';
+            document.getElementById('dashboard-content').style.display = 'block';
+        }
+
+        function logout() {
+            // Add logout functionality here
+            alert('Logging out...');
+        }
+    </script>
+</body>
+</html>
